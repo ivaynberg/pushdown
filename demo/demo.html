@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Pushdown Demo</title>
+    <link href="vendor/bootstrap.min.css" rel="stylesheet"/>
+    <link href="vendor/bootstrap-theme.min.css" rel="stylesheet"/>
+    <link href="../dist/pushdown.css" rel="stylesheet"/>
+    <script src="vendor/jquery-1.8.3.min.js"></script>
+    <script src="../dist/pushdown.js"></script>
+
+    <style>
+        body { background-color: #f2f2f2; }
+        .container { background-color: #fff; }
+        #hotels .pic img { width: 300px; height: 300px; }
+        #hotels .pushdown { padding: 10px; }
+        #hotels .pushdown .title { text-align: center; }
+        #hotels .pushdown-unselected > .pushdown-item {
+            opacity: 0.5;
+            transition: opacity .25s ease-in-out;
+            -moz-transition: opacity .25s ease-in-out;
+            -webkit-transition: opacity .25s ease-in-out;
+        }
+        #hotels .close {
+            width: 48px;
+            height: 48px;
+            text-align: center;
+            background-color: #f2f2f2;
+            font-size: 42px;
+            color: black;
+            border: 1px solid #dddddd;
+        }
+        #hotels .close a {
+            text-decoration: none;
+            font-color: #000000;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <div id="hotels">
+
+        <div class="pushdown">
+            <div class="pushdown-item">
+                <a href="#">
+                    <div class="pic"><img src="img/vdara.jpg"/></div>
+                    <div class="title">Vdara Hotel &amp; Spa</div>
+                </a>
+            </div>
+            <div class="pushdown-content">
+                <div class="close pushdown-close"><a href="#">&times;</a></div>
+                <h4>Non-gaming, eco-friendly, all-suite hotel</h4>
+                <h5>Access it all</h5>
+                This all-suite, smoke-free CityCenter resort is steps away from ARIA Resort and Casino, and connected to the Bellagio. The ARIA Express tram connects the property to other facilities within the complex.
+                <h5>Full-service spa</h5>
+                The offerings of the Spa & Salon Vdara celebrate the purity and organic freshness of nature. Holistic health, supported by the healing power of nature, is the focus of the spa experience, which can be enjoyed solo or in pairs.
+                <h5>A suite guest experience</h5>
+                Suites at Vdara offer flat-panel televisions and complimentary high-speed wired and wireless Internet access. Kitchens include refrigerators, stovetops, and microwaves.
+            </div>
+        </div>
+
+        <div class="pushdown">
+
+            <div class="pushdown-item">
+                <a href="#">
+                    <div class="pic"><img src="img/bellagio.jpg"/></div>
+                    <div class="title">Bellagio</div>
+                </a>
+            </div>
+            <div class="pushdown-content">
+                <div class="close pushdown-close"><a href="#">&times;</a></div>
+                <h4>Opulent, Italian-themed Las Vegas resort on lake</h4>
+                <h5>Fountains on the Strip</h5>
+
+                About 1,000 fountains dance to music and light in front of this European-style hotel set along the Las Vegas Strip, next to CityCenter and a tram ride away from Crystals Retail & Entertainment.
+                <h5>Cirque du Soleil</h5>
+
+                Cirque du Soleil presents the aquatic-based O, with an adjacent show-inspired gallery hosting works by renowned artists.
+                <h5>Premium, newly renovated rooms</h5>
+
+                Bellagio guestrooms and suites feature semi-canopied beds with leather headboards, pillowtop mattresses, and down comforters; bathrooms offer marble and wood vanities, bathrobes, scales, and phones.
+            </div>
+        </div>
+
+        <div class="pushdown">
+            <div class="pushdown-item">
+                <a href="#">
+                    <div class="pic"><img src="img/venetian.jpg"/></div>
+                    <div class="title">The Venetian Resort Hotel &amp; Casino</div>
+                </a>
+            </div>
+            <div class="pushdown-content">
+                <div class="close pushdown-close"><a href="#">&times;</a></div>
+                <h4>Opulent Las Vegas all-suite resort and casino with gondolas</h4>
+                <h5>On the Strip</h5>
+
+                This all-suite resort and casino on the Las Vegas Strip is a short drive from Fashion Show Mall, the convention center, Downtown, and McCarran Airport.
+                <h5>Gondolas, shops, spa</h5>
+
+                The Venetian Resort Hotel & Casino provides an opulent casino, full-service spa, and rooftop pool complex. Guests can attend popular Vegas shows and ride a gondola along Grand Canal Shoppes.
+                <h5>Spacious suites</h5>
+
+                Guest suites at The Venetian offer sunken living rooms, Italian-marble baths, personal fax/copier/printers. Beds are dressed in Egyptian-cotton linens and white, goose-down duvets. High-speed wired and wireless Internet access is included in the resort fee. Accessible rooms are available on request.
+            </div>
+        </div>
+
+        <div class="pushdown">
+            <div class="pushdown-item">
+                <a href="#">
+                    <div class="pic"><img src="img/palazzo.jpg"/></div>
+                    <div class="title">The Palazzo Resort Hotel &amp; Casino </div>
+                </a>
+            </div>
+            <div class="pushdown-content">
+                <div class="close pushdown-close"><a href="#">&times;</a></div>
+                <h4>Spacious spa, casino, and stylish boutiques on The Strip</h4>
+                <h5>Las Vegas Strip</h5>
+
+                This luxurious resort and casino is on the Las Vegas Strip, connected to sister property The Venetian by walks and waterways. Downtown is 3 miles away and McCarran Airport is within 4 miles.
+                <h5>Full-service spa, casino</h5>
+
+                The Palazzo provides a spacious, multi-level spa, over 50 international high-end boutiques, a rooftop deck with pools and private cabanas, and a mouthwatering assortment of fine-dining venues.
+                <h5>3 LCD TVs</h5>
+
+                Guest suites at the Palazzo offer sunken living rooms, work areas with fax/copier/printers, and 3 LCD TVs. Spacious bathrooms have Roman tubs, glass-enclosed showers, and Agraria bath amenities.
+            </div>
+        </div>
+
+        <div class="pushdown">
+            <div class="pushdown-item">
+                <a href="#">
+                    <div class="pic"><img src="img/four-seasons.jpg"/></div>
+                    <div class="title">Four Seasons Hotel Las Vegas</div>
+                </a>
+            </div>
+            <div class="pushdown-content">
+                <div class="close pushdown-close"><a href="#">&times;</a></div>
+                <h4>Sophistication amid Strip sparkle</h4>
+
+                <h5>Oasis on the Strip</h5>
+
+                Located on the Las Vegas Strip, the non-gaming Four Seasons Hotel Las Vegas provides direct access to the adjacent Mandalay Bay Resort & Casino and to Las Vegas entertainment.
+                <h5>Private pool</h5>
+
+                Four Seasons Hotel Las Vegas is home to a lushly landscaped private pool offering signature amenities such as passed frozen fruit and chilled Evian spritz.
+                <h5>Feeling at home</h5>
+
+                Inspired by the glamorous Art Deco era, guest rooms are located on floors 35-39 of the adjacent Mandalay Bay tower and floor-to-ceiling windows offer sweeping views of the Las Vegas Strip and surrounding valley.
+            </div>
+        </div>
+
+
+    </div>
+</div>
+
+<script>
+
+    $("#hotels").pushdown();
+
+</script>
+
+
+</body>
+</html>
