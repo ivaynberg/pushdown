@@ -1,9 +1,16 @@
 module.exports = function (grunt) {
 
+    var banner = '/*!\n' +
+        ' * <%= pkg.name %> v<%= pkg.version %><%= pkg.versionQualifier %> (http://github.com/ivaynberg/pushdown)\n' +
+        ' * Copyright 2013 Igor Vaynberg\n' +
+        ' * Licensed under http://opensource.org/licenses/MIT\n' +
+        ' */\n';
+
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
         concat: {
             options: {
+                banner: banner,
                 separator: ';'
             },
             js: {
@@ -13,7 +20,8 @@ module.exports = function (grunt) {
         },
         uglify: {
             options: {
-                banner: '/*! <%= pkg.name %> <%= grunt.template.today("dd-mm-yyyy") %> */\n'
+                banner: banner,
+                sourceMap: 'dist/<%= pkg.name %>.js.map'
             },
             dist: {
                 files: {
@@ -36,22 +44,8 @@ module.exports = function (grunt) {
         },
         stylus: {
             compile: {
-                options: {
-                    define: {
-                        DEBUG: true}
-                    //paths: ['path/to/import', 'another/to/import'],
-                    //urlfunc: 'embedurl', // use embedurl('test.png') in our code to trigger Data URI embedding
-                    //use: [
-                    //    require('fluidity') // use stylus plugin at compile time
-                    //]
-                    //,
-                    //import: [      //  @import 'foo', 'bar/moo', etc. into every .styl file
-                    //    'foo',       //  that is compiled. These might be findable based on values you gave
-                    //    'bar/moo'    //  to `paths`, or a plugin you added under `use`
-                    //]
-                },
+                options: {},
                 files: {
-                    //'path/to/result.css': 'path/to/source.styl', // 1:1 compile
                     'dist/pushdown.css': ['src/**/*.styl']
                 }
             }

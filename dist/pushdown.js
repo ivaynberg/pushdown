@@ -1,3 +1,8 @@
+/*!
+ * pushdown v0.0.1-snapshot (http://github.com/ivaynberg/pushdown)
+ * Copyright 2013 Igor Vaynberg
+ * Licensed under http://opensource.org/licenses/MIT
+ */
 (function ($, window, document, undefined) {
 
     var Pushdown = function (container, opts) {
