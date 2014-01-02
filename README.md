@@ -58,6 +58,28 @@ For example:
 		</div>
 	</div>
 
+##Methods
+### open
+pushdown.container.find(">.pushdown").get(param)
+
+`$(...).pushdown("open", pushdown)`
+
+
+`pushdown` - pushdown to be opened, can be either a
+ 
+ * string - selector used to find the specified pushdown. 
+ * a number - index of pushdown
+  * jQuery - wrapper of the pushdown
+
+##### Examples
+
+`$("#hotels").pushdown("open", ".bellagio")` will open the first pushdown with the `bellagio` css class.
+
+`$("#hotels").pushdown("open", 0)` will open the first pushdown.
+
+`$("#hotels").pushdown("open", $('#venetian'))` will open the first pushdown selected by the jQuery object.
+
+
 ##License
 The MIT License (MIT)
 

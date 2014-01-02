@@ -47,7 +47,7 @@
 
     <div id="hotels">
 
-        <div class="pushdown">
+        <div class="pushdown vdara">
             <div class="pushdown-item">
                 <a href="#">
                     <div class="pic"><img src="img/vdara.jpg"/></div>
@@ -66,7 +66,7 @@
             </div>
         </div>
 
-        <div class="pushdown">
+        <div class="pushdown bellagio">
 
             <div class="pushdown-item">
                 <a href="#">
@@ -156,13 +156,19 @@
             </div>
         </div>
 
+    </div> <!-- #hotels -->
+    <p style="clear:both">
+        <a id="open-vdara" href="#">Open Vdara</a> | <a id="open-bellagio" href="#">Open Bellagio</a>
+    </p>
 
-    </div>
 </div>
 
 <script>
 
     $("#hotels").pushdown();
+    $("#open-vdara").on("click", function(e) { $("#hotels").pushdown("open", ".vdara"); e.preventDefault(); });
+    $("#open-bellagio").on("click", function(e) { $("#hotels").pushdown("open", 1); e.preventDefault(); });
+
 
 </script>
 
