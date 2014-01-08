@@ -1,7 +1,7 @@
 module.exports = function (grunt) {
 
     var banner = '/*!\n' +
-        ' * <%= pkg.name %> v<%= pkg.version %><%= pkg.versionQualifier %> (http://github.com/ivaynberg/pushdown)\n' +
+        ' * <%= pkg.name %> v<%= pkg.version %><%= pkg.versionQualifier %> <%= grunt.template.today("yyyy-mm-dd") %> (http://github.com/ivaynberg/pushdown)\n' +
         ' * Copyright 2013 Igor Vaynberg\n' +
         ' * Licensed under http://opensource.org/licenses/MIT\n' +
         ' */\n';

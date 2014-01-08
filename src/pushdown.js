@@ -9,6 +9,7 @@
         this.opening = false;
         this.closing = false;
 
+        container.data("pushdown", this);
         container.find(">.pushdown>.pushdown-content").addClass("pushdown-hidden");
         container.on("click", $.proxy(this.click, this));
     };
@@ -154,9 +155,20 @@
             if (args.length === 0 || typeof(args[0]) === "object") {
                 var opts = args.length === 0 ? {} : $.extend({}, args[0]);
                 new Pushdown($(this), opts);
+            } else if (args[0] === "open") {
+                var pushdown = $(this).data("pushdown"),
+                    param = args[1];
+                if (typeof(param) === "string") {
+                    pushdown.queue.push({type: 2, element: pushdown.container.find(">.pushdown").filter(param).first()});
+                } else if (typeof(param) === "number") {
+                    pushdown.queue.push({type: 2, element: $(pushdown.container.find(">.pushdown").get(param))});
+                } else if (param instanceof jQuery) {
+                    pushdown.queue.push({type: 2, element: param});
+                }
+                pushdown.dequeue();
             }
+            return this;
         });
-        return this;
     };
 
 })(jQuery, window, document);
